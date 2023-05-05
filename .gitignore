@@ -137,3 +137,6 @@ dmypy.json
 .dockerignore
 /artifacts
 /data
+
+# Any csv files
+*.csv
