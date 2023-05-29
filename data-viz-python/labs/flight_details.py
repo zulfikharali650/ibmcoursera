@@ -10,7 +10,7 @@ import plotly.express as px
 airline_data =  pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/airline_data.csv', 
                             encoding = "ISO-8859-1",
                             dtype={'Div1Airport': str, 'Div1TailNum': str, 
-                                   'Div2Airport': str, 'Div2TailNum': str})
+                                    'Div2Airport': str, 'Div2TailNum': str})
 
 # Create a dash application
 app = dash.Dash(__name__)
@@ -75,13 +75,13 @@ Returns:
 """
 # Callback decorator
 @app.callback( [
-               Output(component_id='carrier-plot', component_property='figure'),
-               Output(component_id='weather-plot', component_property='figure'),
-               Output(component_id='nas-plot', component_property='figure'),
-               Output(component_id='security-plot', component_property='figure'),
-               Output(component_id='late-plot', component_property='figure')
-               ],
-               Input(component_id='input-year', component_property='value'))
+                Output(component_id='carrier-plot', component_property='figure'),
+                Output(component_id='weather-plot', component_property='figure'),
+                Output(component_id='nas-plot', component_property='figure'),
+                Output(component_id='security-plot', component_property='figure'),
+                Output(component_id='late-plot', component_property='figure')
+                ],
+                Input(component_id='input-year', component_property='value'))
 # Computation to callback function and return graph
 def get_graph(entered_year):
     

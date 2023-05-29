@@ -75,13 +75,13 @@ Returns:
 """
 # Callback decorator
 @app.callback( [
-               Output(component_id='carrier-plot', component_property='figure'),
-               Output(component_id='weather-plot', component_property='figure'),
-               Output(component_id='nas-plot', component_property='figure'),
-               Output(component_id='security-plot', component_property='figure'),
-               Output(component_id='late-plot', component_property='figure')
-               ],
-               Input(component_id='input-year', component_property='value'))
+            Output(component_id='carrier-plot', component_property='figure'),
+            Output(component_id='weather-plot', component_property='figure'),
+            Output(component_id='nas-plot', component_property='figure'),
+            Output(component_id='security-plot', component_property='figure'),
+            Output(component_id='late-plot', component_property='figure')
+            ],
+            Input(component_id='input-year', component_property='value'))
 # Computation to callback function and return graph
 def get_graph(entered_year):
     
